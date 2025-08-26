@@ -21,9 +21,11 @@
     "serve": "concurrently \"npm run build -- --watch\" \"nodemon dist/index.js\""
   },
   "dependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "concurrently": "^9.2.1",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "mongoose": "^8.18.0",
     "ts-node": "^10.9.2",
