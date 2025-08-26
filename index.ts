@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express';
 import "dotenv/config"
 import mongoose from 'mongoose';
 import router from './routes/validation';
+import sign_up_router from './routes/signup';
+import login_router from './routes/login';
 
 const app = express();
 
@@ -28,6 +30,8 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use('/', router)
+app.use('/signup', sign_up_router)
+app.use('/login', login_router)
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
